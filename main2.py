@@ -1,4 +1,4 @@
-import random, time
+import random
 
 deck = list(range(2, 15)) * 4
 random.shuffle(deck)
@@ -13,7 +13,7 @@ while len(p1_deck) > 0 and len(p2_deck) > 0:
  
 	game_pile.append(p1Card)
 	game_pile.append(p2Card)
-	print(f"Player 1 has a {game_pile[-1]}\n Player 2 has a {game_pile[-2]}")
+	print(f"Player 1 has a {p1Card}\n Player 2 has a {p2Card}")
 
 	if p1Card > p2Card:
 		print("Player 1 wins!")
@@ -28,7 +28,7 @@ while len(p1_deck) > 0 and len(p2_deck) > 0:
 	elif p1Card == p2Card: 
 		print("War!")
 
-if len(p2_deck) > 0:
+if len(p2_deck) > len(p1_deck):
 	print("Player two wins the game!!!")
 else: 
 	print("Player one wins the game!!!")
